@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  api:
+    build: ./db
+    image: api-server
+    container_name: api-server
+    command: npm run develop
+    volumes:
+      - ./db:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - "3000:3000"
