@@ -1,1 +1,480 @@
-{}
+{
+  "getAmericanFlights": [
+    {
+      "airline": "American",
+      "flightCode": "RREE0001",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "LAX",
+      "departureDate": "2016-01-20T00:00:00",
+      "emptySeats": 0,
+      "price": 541,
+      "planeType": "Boeing 787"
+    },
+    {
+      "airline": "American",
+      "flightCode": "EEFD0123",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "CLE",
+      "departureDate": "2016-01-25T00:00:00",
+      "emptySeats": 7,
+      "price": 300,
+      "planeType": "Boeing 747"
+    },
+    {
+      "airline": "American",
+      "flightCode": "FFEE0192",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "LAX",
+      "departureDate": "2016-01-20T00:00:00",
+      "emptySeats": 0,
+      "price": 300,
+      "planeType": "Boeing 777"
+    },
+    {
+      "airline": "American",
+      "flightCode": "RREE1000",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "CLE",
+      "departureDate": "2016-01-20T00:00:00",
+      "emptySeats": 5,
+      "price": 200,
+      "planeType": "Boeing 737"
+    },
+    {
+      "airline": "American",
+      "flightCode": "RREE1093",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "SFO",
+      "departureDate": "2016-02-11T00:00:00",
+      "emptySeats": 1,
+      "price": 142,
+      "planeType": "Boeing 737"
+    },
+    {
+      "airline": "American",
+      "flightCode": "FFEE1112",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "CLE",
+      "departureDate": "2016-01-20T00:00:00",
+      "emptySeats": 100,
+      "price": 954,
+      "planeType": "Boeing 787"
+    },
+    {
+      "airline": "American",
+      "flightCode": "EEFD1994",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "SFO",
+      "departureDate": "2016-01-01T00:00:00",
+      "emptySeats": 0,
+      "price": 676,
+      "planeType": "Boeing 777"
+    },
+    {
+      "airline": "American",
+      "flightCode": "FFEE2000",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "SFO",
+      "departureDate": "2016-02-20T00:00:00",
+      "emptySeats": 30,
+      "price": 300,
+      "planeType": "Boeing 737"
+    },
+    {
+      "airline": "American",
+      "flightCode": "EEFD3000",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "SFO",
+      "departureDate": "2016-02-01T00:00:00",
+      "emptySeats": 0,
+      "price": 900,
+      "planeType": "Boeing 737"
+    },
+    {
+      "airline": "American",
+      "flightCode": "EEFD4511",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "LAX",
+      "departureDate": "2016-01-15T00:00:00",
+      "emptySeats": 100,
+      "price": 900,
+      "planeType": "Boeing 777"
+    },
+    {
+      "airline": "American",
+      "flightCode": "RREE4567",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "SFO",
+      "departureDate": "2016-01-20T00:00:00",
+      "emptySeats": 100,
+      "price": 456,
+      "planeType": "Boeing 737"
+    }
+  ],
+  "getUnitedFlights": [
+    {
+      "airline": "United",
+      "flightCode": "ER38SD",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "SFO",
+      "departureDate": "2015/03/20",
+      "emptySeats": 0,
+      "price": 400,
+      "planeType": "Boeing 737"
+    },
+    {
+      "airline": "United",
+      "flightCode": "ER45IF",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "LAX",
+      "departureDate": "2015/02/11",
+      "emptySeats": 52,
+      "price": 345.99,
+      "planeType": "Boeing 737"
+    },
+    {
+      "airline": "United",
+      "flightCode": "ER45JD",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "LAX",
+      "departureDate": "2015/04/11",
+      "emptySeats": 12,
+      "price": 346,
+      "planeType": "Boeing 777"
+    },
+    {
+      "airline": "United",
+      "flightCode": "ER0945",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "LAX",
+      "departureDate": "2015/06/11",
+      "emptySeats": 0,
+      "price": 423,
+      "planeType": "Boeing 707"
+    },
+    {
+      "airline": "United",
+      "flightCode": "ER9FJE",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "CLE",
+      "departureDate": "2015/07/11",
+      "emptySeats": 32,
+      "price": 845,
+      "planeType": "Boeing 727"
+    },
+    {
+      "airline": "United",
+      "flightCode": "ER3KFD",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "CLE",
+      "departureDate": "2015/08/11",
+      "emptySeats": 13,
+      "price": 245,
+      "planeType": "Boeing 747"
+    },
+    {
+      "airline": "United",
+      "flightCode": "ER39RK",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "SFO",
+      "departureDate": "2015/09/11",
+      "emptySeats": 54,
+      "price": 945,
+      "planeType": "Boeing 757"
+    },
+    {
+      "airline": "United",
+      "flightCode": "ER39RJ",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "SFO",
+      "departureDate": "2015/02/12",
+      "emptySeats": 23,
+      "price": 954,
+      "planeType": "Boeing 777"
+    },
+    {
+      "airline": "United",
+      "flightCode": "ER95JF",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "PDF",
+      "departureDate": "2015/02/12",
+      "emptySeats": 23,
+      "price": 234,
+      "planeType": "Boeing 787"
+    },
+    {
+      "airline": "United",
+      "flightCode": "ER49FD",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "PDX",
+      "departureDate": "2015/02/13",
+      "emptySeats": 0,
+      "price": 853,
+      "planeType": "Boeing 777"
+    },
+    {
+      "airline": "United",
+      "flightCode": "ER95JF",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "PDX",
+      "departureDate": "2015/02/20",
+      "emptySeats": 95,
+      "price": 483,
+      "planeType": "Boeing 777"
+    },
+    {
+      "airline": "United",
+      "flightCode": "ER04KF",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "PDX",
+      "departureDate": "2015/02/12",
+      "emptySeats": 30,
+      "price": 532,
+      "planeType": "Boeing 777"
+    }
+  ],
+  "getQantasFlights": [
+    {
+      "airline": "Qantas",
+      "flightCode": "K-8108",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "SFO",
+      "departureDate": "2014-01-04T00:00:00",
+      "emptySeats": 15,
+      "price": 250,
+      "planeType": "Airbus 380"
+    },
+    {
+      "airline": "Qantas",
+      "flightCode": "S-8492",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "LAX",
+      "departureDate": "2016-01-04T00:00:00",
+      "emptySeats": 52,
+      "price": 146,
+      "planeType": "Airbus 210"
+    },
+    {
+      "airline": "Qantas",
+      "flightCode": "S-8101",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "LAX",
+      "departureDate": "2017-04-01T00:00:00",
+      "emptySeats": 24,
+      "price": 346,
+      "planeType": "Boeing 777"
+    },
+    {
+      "airline": "Qantas",
+      "flightCode": "V-1029",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "LAX",
+      "departureDate": "2017-09-23T00:00:00",
+      "emptySeats": 0,
+      "price": 503,
+      "planeType": "Airbus 330"
+    },
+    {
+      "airline": "Qantas",
+      "flightCode": "K-1102",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "SYD",
+      "departureDate": "2017-09-23T00:00:00",
+      "emptySeats": 23,
+      "price": 1025,
+      "planeType": "Boeing 727"
+    },
+    {
+      "airline": "Qantas",
+      "flightCode": "L-9183",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "SYD",
+      "departureDate": "2014-02-09T00:00:00",
+      "emptySeats": 13,
+      "price": 445,
+      "planeType": "Airbus 380"
+    },
+    {
+      "airline": "Qantas",
+      "flightCode": "S-9481",
+      "fromAirportCode": "SYD",
+      "toAirportCode": "SFO",
+      "departureDate": "2016-10-10T00:00:00",
+      "emptySeats": 45,
+      "price": 549,
+      "planeType": "Airbus 380"
+    },
+    {
+      "airline": "Qantas",
+      "flightCode": "Q-9811",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "SFO",
+      "departureDate": "2016-12-21T00:00:00",
+      "emptySeats": 32,
+      "price": 498,
+      "planeType": "Boeing 777"
+    },
+    {
+      "airline": "Qantas",
+      "flightCode": "Z-8492",
+      "fromAirportCode": "SYD",
+      "toAirportCode": "PDF",
+      "departureDate": "2017-12-21T00:00:00",
+      "emptySeats": 32,
+      "price": 432,
+      "planeType": "Boeing 787"
+    },
+    {
+      "airline": "Qantas",
+      "flightCode": "E-0091",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "PDX",
+      "departureDate": "2016-09-30T00:00:00",
+      "emptySeats": 25,
+      "price": 384,
+      "planeType": "Airbus 380"
+    },
+    {
+      "airline": "Qantas",
+      "flightCode": "R-9822",
+      "fromAirportCode": "SYD",
+      "toAirportCode": "PDX",
+      "departureDate": "2017-05-02T00:00:00",
+      "emptySeats": 59,
+      "price": 892,
+      "planeType": "Boeing 777"
+    },
+    {
+      "airline": "Qantas",
+      "flightCode": "S-9101",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "SYD",
+      "departureDate": "2017-04-02T00:00:00",
+      "emptySeats": 53,
+      "price": 325,
+      "planeType": "Boeing 777"
+    }
+  ],
+  "getDeltaFlights": [
+    {
+      "airline": "Delta",
+      "flightCode": "A1B2C3",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "SFO",
+      "departureDate": "2015/03/20",
+      "emptySeats": "40",
+      "price": "400.0",
+      "planeType": "Boeing 737"
+    },
+    {
+      "airline": "Delta",
+      "flightCode": "A1B2C4",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "LAX",
+      "departureDate": "2015/02/11",
+      "emptySeats": "10",
+      "price": "199.99",
+      "planeType": "Boeing 737"
+    },
+    {
+      "airline": "Delta",
+      "flightCode": "A134DS",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "LAX",
+      "departureDate": "2015/04/11",
+      "emptySeats": "40",
+      "price": "750.0",
+      "planeType": "Boeing 777"
+    },
+    {
+      "airline": "Delta",
+      "flightCode": "A1B34S",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "CLE",
+      "departureDate": "2015/06/11",
+      "emptySeats": "50",
+      "price": "420.0",
+      "planeType": "Boeing 707"
+    },
+    {
+      "airline": "Delta",
+      "flightCode": "A12342",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "CLE",
+      "departureDate": "2015/07/11",
+      "emptySeats": "17",
+      "price": "308.0",
+      "planeType": "Boeing 727"
+    },
+    {
+      "airline": "Delta",
+      "flightCode": "A1QWER",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "LAX",
+      "departureDate": "2015/08/11",
+      "emptySeats": "18",
+      "price": "496.0",
+      "planeType": "Boeing 747"
+    },
+    {
+      "airline": "Delta",
+      "flightCode": "A1ASD4",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "CLE",
+      "departureDate": "2015/09/11",
+      "emptySeats": "40",
+      "price": "736.0",
+      "planeType": "Boeing 757"
+    },
+    {
+      "airline": "Delta",
+      "flightCode": "A1BTT4",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "SFO",
+      "departureDate": "2015/02/12",
+      "emptySeats": "30",
+      "price": "593.0",
+      "planeType": "Boeing 777"
+    },
+    {
+      "airline": "Delta",
+      "flightCode": "A14244",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "SFO",
+      "departureDate": "2015/02/12",
+      "emptySeats": "10",
+      "price": "294.0",
+      "planeType": "Boeing 787"
+    },
+    {
+      "airline": "Delta",
+      "flightCode": "A1FGF4",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "PDX",
+      "departureDate": "2015/02/13",
+      "emptySeats": "80",
+      "price": "958.0",
+      "planeType": "Boeing 777"
+    },
+    {
+      "airline": "Delta",
+      "flightCode": "AFFFC4",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "PDX",
+      "departureDate": "2015/02/20",
+      "emptySeats": "30",
+      "price": "283.0",
+      "planeType": "Boeing 777"
+    },
+    {
+      "airline": "Delta",
+      "flightCode": "A1B3D4",
+      "fromAirportCode": "MUA",
+      "toAirportCode": "PDX",
+      "departureDate": "2015/02/12",
+      "emptySeats": "10",
+      "price": "385.0",
+      "planeType": "Boeing 777"
+    }
+  ]
+}

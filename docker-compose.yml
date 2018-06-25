@@ -28,8 +28,4 @@ services:
       - /usr/app/node_modules
     ports:
       - "3000:3000"
-    healthcheck:
-      test: [ "CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3000/" ]
-      interval: 10s
-      timeout: 5s
-      retries: 3
+      
