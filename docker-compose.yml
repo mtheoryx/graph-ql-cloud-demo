@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  graphql:
+    build: ./server
+    image: graphql-server
+    container_name: graphql-server
+    command: npm run develop
+    volumes:
+      - ./server:/usr/app
+      - /user/app/node_modules
+    ports:
+      - "8080:8080"
+    depends_on:
+      - api
+    healthcheck:
+      test: [ "CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3000/healthcheck" ]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+  api:
+    build: ./db
+    image: api-server
+    container_name: api-server
+    command: npm run develop
+    volumes:
+      - ./db:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - "3000:3000"
+    healthcheck:
+      test: [ "CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3000/" ]
+      interval: 10s
+      timeout: 5s
+      retries: 3

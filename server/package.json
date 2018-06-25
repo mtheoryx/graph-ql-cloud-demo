@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Node/Express based Graphql server",
+  "main": "index.js",
+  "scripts": {
+    "develop": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "compression": "^1.7.2",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0"
+  }
+}
