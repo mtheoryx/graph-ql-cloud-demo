@@ -4,14 +4,20 @@
   "description": "Node/Express based Graphql server",
   "main": "index.js",
   "scripts": {
-    "develop": "node index.js"
+    "develop": "nodemon --watch app.js --watch schema.js index.js"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.18.0",
     "compression": "^1.7.2",
     "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "graphql": "^0.13.2",
     "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
   }
 }
