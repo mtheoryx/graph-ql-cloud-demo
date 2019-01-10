@@ -120,6 +120,9 @@ typings/
 # .tfstate files
 *.tfstate
 *.tfstate.*
+# Special snowflake, want to track chicken/egg state bucket and lock table
+!deploy/init/*.tfstate
+!deploy/init/*.tfstate.*
 
 # Crash log files
 crash.log
