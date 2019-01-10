@@ -6,3 +6,5 @@ COPY package*.json /usr/app/
 RUN npm install --quiet
 
 EXPOSE 3000
+
+CMD ["npm", "run", "develop"]

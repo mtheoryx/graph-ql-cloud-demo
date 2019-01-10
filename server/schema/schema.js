@@ -1,6 +1,18 @@
+// DATA Shape
+// {
+//   "airline": "American",
+//   "flightCode": "RREE0001",
+//   "fromAirportCode": "MUA",
+//   "toAirportCode": "LAX",
+//   "departureDate": "2016-01-20T00:00:00",
+//   "emptySeats": 0,
+//   "price": 541,
+//   "planeType": "Boeing 787"
+// }
 const graphql = require('graphql');
 const axios = require('axios');
 const apiUrl = `http://api:3000`
+// const apiUrl = `http://flightsdemo.cloudhub.io`
 const {
   GraphQLObjectType,
   GraphQLString,
@@ -31,12 +43,13 @@ const RootQuery = new GraphQLObjectType({
   fields: {
     flights: {
       type: new GraphQLList(FlightType),
-      args: { 
+      args: {
         flightCode: { type: GraphQLString },
         airline: { type: GraphQLString },
-        toAirportCode: { type: GraphQLString }
+        toAirportCode: { type: GraphQLString },
+        fromAirportCode: { type: GraphQLString }
       },
-      resolve(parentValue, {flightCode, airline, toAirportCode}) {
+      resolve(parentValue, {flightCode, airline, toAirportCode, fromAirportCode}) {
         let airlineFetch;
         const keywordEndpointMap = {
           american: 'getAmericanFlights',
@@ -59,7 +72,9 @@ const RootQuery = new GraphQLObjectType({
               return [...a, ...b, ...c, ...d];
             });
         }
-        
+        if (fromAirportCode) {
+          airlineFetch = airlineFetch.then(d => d.filter(d => t.fromAirportCode === fromAirportCode))
+        }
         //Destination filtering
         if (toAirportCode) {
           airlineFetch = airlineFetch.then(d => d.filter(d => d.toAirportCode === toAirportCode));
@@ -67,7 +82,7 @@ const RootQuery = new GraphQLObjectType({
         if (flightCode) {
           airlineFetch = airlineFetch.then(d => d.filter(d => d.flightCode === flightCode));
         }
-        
+
         // Departure Date sorting
         airlineFetch = airlineFetch.then(d => d.sort(((a,b) => {
           const keyA = new Date(a.departureDate);
@@ -86,14 +101,3 @@ const RootQuery = new GraphQLObjectType({
 module.exports = new GraphQLSchema({
   query: RootQuery
 });
-// DATA Shape
-// {
-//   "airline": "American",
-//   "flightCode": "RREE0001",
-//   "fromAirportCode": "MUA",
-//   "toAirportCode": "LAX",
-//   "departureDate": "2016-01-20T00:00:00",
-//   "emptySeats": 0,
-//   "price": 541,
-//   "planeType": "Boeing 787"
-// }

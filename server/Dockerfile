@@ -5,4 +5,8 @@ WORKDIR /usr/app
 COPY package*.json /usr/app/
 RUN npm install --quiet
 
-EXPOSE 3000
+COPY . .
+
+EXPOSE 8080
+
+CMD ["node", "index.js"]

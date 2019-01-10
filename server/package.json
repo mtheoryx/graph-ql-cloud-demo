@@ -4,7 +4,8 @@
   "description": "Node/Express based Graphql server",
   "main": "index.js",
   "scripts": {
-    "develop": "nodemon --watch app.js --watch schema.js index.js"
+    "develop": "nodemon --watch app.js --watch schema.js index.js",
+    "serve": "node index.js"
   },
   "keywords": [],
   "author": "",
