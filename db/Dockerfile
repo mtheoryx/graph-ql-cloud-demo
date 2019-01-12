@@ -7,7 +7,7 @@ COPY package*.json /usr/app/
 RUN npm install --quiet
 
 # Copy over the db.json
-COPY ./db.json .
+COPY . .
 
 EXPOSE 3000
 
