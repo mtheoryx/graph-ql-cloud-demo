@@ -4,7 +4,8 @@
   "description": "Sample REST api mocking a Mulesoft collection of apis",
   "main": "index.js",
   "scripts": {
-    "develop": "json-server --nc -p 3000 -H 0.0.0.0 --watch db.json"
+    "develop": "json-server --nc -p 3000 -H 0.0.0.0 --watch db.json",
+    "start": "json-server --nc -p 3000 -H 0.0.0.0 db.json"
   },
   "keywords": [],
   "author": "",
