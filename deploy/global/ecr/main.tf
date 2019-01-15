@@ -2,6 +2,10 @@
 resource "aws_ecr_repository" "api-server" {
   name = "api-server"
 
+  lifecycle {
+    prevent_destroy = true
+  }
+
   tags {
     Name        = "API Server ECR Repository"
     Environment = "OPS"
@@ -12,6 +16,10 @@ resource "aws_ecr_repository" "api-server" {
 # GRAPHQL-SERVER image repository
 resource "aws_ecr_repository" "graphql-server" {
   name = "graphql-server"
+
+  lifecycle {
+    prevent_destroy = true
+  }
 
   tags {
     Name        = "Graphql Server ECR Repository"
