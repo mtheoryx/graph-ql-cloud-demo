@@ -13,8 +13,8 @@ variable "vpc_cidr" {
   description = "VPC CIDR blocks by environment"
 
   default = {
-    dev  = "10.1.0.0/16"
-    prod = "192.168.0.0/16"
+    dev  = "10.0.0.0/16"
+    prod = "10.1.0.0/16"
   }
 }
 
