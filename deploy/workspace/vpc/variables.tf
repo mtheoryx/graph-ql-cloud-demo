@@ -17,3 +17,13 @@ variable "vpc_cidr" {
     prod = "192.168.0.0/16"
   }
 }
+
+variable "environment" {
+  type        = "map"
+  description = "Environement of deployment"
+
+  default {
+    dev  = "Development"
+    prod = "Production"
+  }
+}

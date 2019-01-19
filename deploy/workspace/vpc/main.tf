@@ -15,4 +15,10 @@
 
 resource "aws_vpc" "vpc" {
   cidr_block = "${var.vpc_cidr[terraform.workspace]}"
+
+  tags {
+    Name        = "The VPC"
+    Environment = "${var.environment[terraform.workspace]}"
+    Managed     = "Terraform v0.11.10"
+  }
 }
