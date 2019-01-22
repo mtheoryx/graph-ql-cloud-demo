@@ -125,7 +125,7 @@ resource "aws_route_table_association" "private-route-assoc" {
 
 # security group(s)
 # security group(s) rule(s)
+# keys (tf-controlled, generated keys)
 # bastion
 # EIP for bastion (caution, free only while attached)
-# keys (tf-controlled, generated keys)
 
