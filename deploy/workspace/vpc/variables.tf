@@ -27,8 +27,8 @@ variable "public_subnets_cidr" {
   description = "Public subnet cidr blocks by environment"
 
   default = {
-    dev  = "10.0.1.0/24, 10.0.2.0/24"
-    prod = "10.1.1.0/24, 10.1.2.0/24"
+    dev  = "10.0.1.0/24,10.0.2.0/24"
+    prod = "10.1.1.0/24,10.1.2.0/24"
   }
 }
 
