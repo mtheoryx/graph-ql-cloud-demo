@@ -6,6 +6,18 @@ provider "aws" {
   }
 }
 
+provider "tls" {
+  version = "~> 1.2"
+}
+
+provider "local" {
+  version = "~> 1.1"
+}
+
+provider "null" {
+  version = "~> 2.0"
+}
+
 terraform {
   required_version = "0.11.10"
 

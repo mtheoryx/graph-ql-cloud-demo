@@ -2,6 +2,14 @@ variable "region" {
   default = "us-east-2"
 }
 
+variable "ssh-key-name" {
+  default = "ssh-bastion-key"
+}
+
+variable "app_name" {
+  default = "graphqldemo"
+}
+
 variable "account_roles" {
   type        = "map"
   description = "Roles to assume per environment"

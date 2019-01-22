@@ -124,8 +124,97 @@ resource "aws_route_table_association" "private-route-assoc" {
 }
 
 # security group(s)
-# security group(s) rule(s)
-# keys (tf-controlled, generated keys)
-# bastion
-# EIP for bastion (caution, free only while attached)
+resource "aws_security_group" "bastion-security-group" {
+  name   = "${var.app_name}-bastgion-sg"
+  vpc_id = "${aws_vpc.vpc.id}"
 
+  # tags
+}
+
+# security group(s) rule(s)
+resource "aws_security_group_rule" "allow-ssh-bastion-ingress" {
+  security_group_id = "${aws_security_group.bastion-security-group.id}"
+  type              = "ingress"
+  from_port         = 22
+  to_port           = 22
+  protocol          = "tcp"
+  cidr_blocks       = ["0.0.0.0/0"]
+}
+
+resource "aws_security_group_rule" "allow-all-bastion-egress" {
+  security_group_id = "${aws_security_group.bastion-security-group.id}"
+  type              = "egress"
+  from_port         = 0
+  to_port           = 0
+  protocol          = "-1"
+  cidr_blocks       = ["0.0.0.0/0"]
+}
+
+# keys (tf-controlled, generated keys)
+#
+# locals var (for the key name/filepath)
+locals {
+  public_key_filename  = "bastion.pub"
+  private_key_filename = "bastion.pem"
+}
+
+# generate key
+resource "tls_private_key" "generated" {
+  algorithm = "RSA"
+  rsa_bits  = 4096
+}
+
+# create keypair
+resource "aws_key_pair" "generated" {
+  key_name   = "${var.ssh-key-name}"
+  public_key = "${tls_private_key.generated.public_key_openssh}"
+
+  lifecycle {
+    ignore_changes = ["keyname"]
+  }
+}
+
+# save to local public key
+# save to local private key
+resource "local_file" "bastion-private-key-file" {
+  content  = "${tls_private_key.generated.private_key_pem}"
+  filename = "${local.private_key_filename}"
+}
+
+# change permissions on private key
+resource "null_resource" "chmod-key" {
+  depends_on = ["local_file.bastion-private-key-file"]
+
+  triggers {
+    key = "${tls_private_key.generated.private_key_pem}"
+  }
+
+  provisioner "local-exec" {
+    command = "chmod 600 ${local.private_key_filename}"
+  }
+}
+
+#
+# bastion
+resource "aws_instance" "bastion" {
+  ami                    = "ami-04328208f4f0cf1fe"
+  subnet_id              = "${aws_subnet.public.0.id}"
+  key_name               = "${aws_key_pair.generated.key_name}"
+  instance_type          = "t2.micro"
+  vpc_security_group_ids = ["${aws_security_group.bastion-security-group.id}"]
+
+  tags {
+    Name        = "${var.app_name}-${terraform.workspace}-bastion"
+    Environment = "${var.environment[terraform.workspace]}"
+    Managed     = "Terraform v0.11.10"
+  }
+}
+
+#
+# EIP for bastion (caution, free only while attached)
+resource "aws_eip" "bastion-eip" {
+  instance = "${aws_instance.bastion.id}"
+  vpc      = true
+
+  # tags
+}
