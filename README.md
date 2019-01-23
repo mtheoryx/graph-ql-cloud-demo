@@ -1,29 +1,5 @@
-# README #
+# README
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Potential costs:
 
-### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+[Current Cost Snapshot](https://calculator.s3.amazonaws.com/index.html#r=IAD&s=EC2&key=calc-64D6B32B-5E30-4942-8409-E1CD007E40BE)
