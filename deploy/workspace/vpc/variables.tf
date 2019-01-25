@@ -61,7 +61,7 @@ variable "azs" {
 
 variable "environment" {
   type        = "map"
-  description = "Environement of deployment"
+  description = "Environment of deployment"
 
   default {
     dev  = "Development"
