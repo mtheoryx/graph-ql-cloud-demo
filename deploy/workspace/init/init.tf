@@ -10,7 +10,7 @@ resource "aws_dynamodb_table" "dynamodb-terraform-workspace-lock" {
   }
 
   tags {
-    Name        = "Stream Ops Worksapce Lock Table"
+    Name        = "Stream Ops Workspace Lock Table"
     Environment = "StreamOps Workspace"
     CostCenter  = "Engineer Marketing"
     Managed     = "Terraform v0.11.10"

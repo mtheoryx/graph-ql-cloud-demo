@@ -125,7 +125,7 @@ resource "aws_route_table_association" "private-route-assoc" {
 
 # security group(s)
 resource "aws_security_group" "bastion-security-group" {
-  name   = "${var.app_name}-bastgion-sg"
+  name   = "${var.app_name}-bastion-sg"
   vpc_id = "${aws_vpc.vpc.id}"
 
   # tags
